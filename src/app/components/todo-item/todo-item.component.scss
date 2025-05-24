@@ -1,0 +1,62 @@
+.todos{
+    &__item {
+        display: flex;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        margin-bottom: 0.75rem;
+        background: linear-gradient(90deg, #f8fafc 0%, #e0e7ef 100%);
+        border-radius: 0.75rem;
+        box-shadow: 0 2px 8px rgba(60, 72, 88, 0.07);
+        transition: box-shadow 0.2s, transform 0.2s;
+        cursor: pointer;
+        gap: 1rem;
+
+        &:hover, &:focus-within {
+            box-shadow: 0 4px 16px rgba(60, 72, 88, 0.15);
+            transform: translateY(-2px) scale(1.01);
+            background: linear-gradient(90deg, #e0e7ef 0%, #f8fafc 100%);
+        }
+
+        &--completed {
+            opacity: 0.6;
+            text-decoration: line-through;
+        }
+
+        .todo-checkbox {
+            accent-color: #2563eb;
+            width: 1.2rem;
+            height: 1.2rem;
+            margin-right: 0.75rem;
+            cursor: pointer;
+            transition: accent-color 0.2s;
+        }
+
+        .todo-text {
+            flex: 1;
+            font-size: 1.1rem;
+            color: #22223b;
+            transition: color 0.2s;
+        }
+
+        .todo-actions {
+            display: flex;
+            gap: 0.5rem;
+
+            button {
+                background: none;
+                border: none;
+                color: #64748b;
+                font-size: 1.2rem;
+                padding: 0.3rem 0.6rem;
+                border-radius: 0.4rem;
+                cursor: pointer;
+                transition: background 0.2s, color 0.2s;
+
+                &:hover {
+                    background: #e0e7ef;
+                    color: #2563eb;
+                }
+            }
+        }
+    }
+}
